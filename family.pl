@@ -1,0 +1,15 @@
+male(peter).
+male(simon).
+male(brandon).
+female(faith).
+female(phoebe).
+female(raquel).
+female(shantel).
+parent(peter,faith).
+parent(raquel,faith).
+parent(raquel,shantel).
+parent(simon,peter).
+parent(phoebe,peter).
+grandchild(D,R):-parent(R,Y),parent(Y,D).
+sister(A,B):-parent(W,A),parent(W,B),female(A).
+father(T,K):-parent(T,K),male(T).

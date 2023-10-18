@@ -1,0 +1,278 @@
+causes(mycobacterium_tuberculosis, tuberculosis).
+causes(vibrio_cholerae, cholera).
+causes(neisseria_gonorrhoeae, gonorrhea).
+causes(treponema_pallidum, syphilis).
+causes(borrelia_burgdorferi, lyme_disease).
+causes(streptococcus_pneumoniae, meningitis).
+causes(neisseria_meningitidis, meningitis).
+causes(haemophilus_influenzae, meningitis).
+causes(salmonella_species, salmonellosis).
+causes(shigella_species, shigellosis).
+causes(corynebacterium_diphtheriae, diphtheria).
+causes(bordetella_pertussis, pertussis).
+causes(clostridium_tetani, tetanus).
+causes(legionella_pneumophila, legionnaires_disease).
+causes(bacillus_anthracis, anthrax).
+causes(clostridium_botulinum, botulism).
+causes(staphylococcus_aureus, staphylococcal_infections).
+causes(escherichia_coli, e_coli_infections).
+causes(listeria_monocytogenes, listeriosis).
+causes(francisella_tularensis, tularemia).
+causes(brucella_species, brucellosis).
+causes(helicobacter_pylori, peptic_ulcers).
+causes(yersinia_pestis, pneumonic_plague).
+causes(mycobacterium_leprae, leprosy).
+causes(burkholderia_pseudomallei, whitmores_disease).
+causes(bartonella_henselae, cat_scratch_disease).
+causes(human_immunodeficiency_virus, hiv_aids).
+causes(influenza_virus, influenza).
+causes(hepatitis_b_virus, hepatitis_b).
+causes(hepatitis_c_virus, hepatitis_c).
+causes(herpes_simplex_virus, herpes).
+causes(rubella_virus, rubella).
+causes(measles_virus, measles).
+causes(poliovirus, polio).
+causes(human_papillomavirus, hpv).
+causes(hepatitis_a_virus, hepatitis_a).
+causes(ebola_virus, ebola).
+causes(zika_virus, zika).
+causes(dengue_virus, dengue).
+causes(hantavirus, hantavirus_infection).
+causes(sars_cov_2, covid_19).
+causes(h1n1_influenza_virus, h1n1_influenza).
+causes(h5n1_influenza_virus, h5n1_influenza).
+causes(hiv, hiv_aids).
+symptom(influenza,feeling_feverish).
+symptom(influenza,coughing).
+symptom(influenza,sore_throat).
+symptom(influenza,runny_nose).
+symptom(influenza,headache).
+symptom(influenza,body_aches).
+symptom(influenza,fatigue).
+
+symptom(tuberculosis,cough).
+symptom(tuberculosis,fever).
+symptom(tuberculosis,weight_loss).
+symptom(tuberculosis,night_sweats).
+symptom(tuberculosis,fatigue).
+symptom(tuberculosis,chest_pain).
+symptom(tuberculosis,loss_of_appetite).
+
+symptom(cholera,profuse_diarrhea).
+symptom(cholera,vomiting).
+symptom(cholera,dehydration).
+symptom(cholera,muscle_cramps).
+symptom(cholera,low_blood_pressure).
+symptom(cholera,rapid_heartbeat).
+symptom(cholera,electrolyte_imbalance).
+symptom(cholera,shock).
+
+symptom(gonorrhea,burning_sensation_when_urinating).
+symptom(gonorrhea,unusual_discharge_from_genitals).
+symptom(gonorrhea,increased_urination).
+symptom(gonorrhea,abdominal_pain).
+symptom(gonorrhea,pelvic_pain).
+symptom(gonorrhea,sore_throat).
+symptom(gonorrhea, rectal_pain_or_discharge).
+
+%symptom(painless_sores).
+%symptom(skin_rash).
+%symptom(mucous_membrane_ulcers).
+%symptom(fever).
+%symptom(fatigue).
+%symptom(headache).
+%symptom(swollen_lymph_nodes).
+symptom(lyme_disease, erythema_migrans).
+symptom(lyme_disease, fatigue).
+symptom(lyme_disease, fever).
+symptom(lyme_disease, headache).
+symptom(lyme_disease, muscle_and_joint_aches).
+symptom(lyme_disease, swollen_lymph_nodes).
+symptom(lyme_disease, bulls_eye_rash).
+symptom(lyme_disease, chills).
+symptom(lyme_disease, facial_palsy).
+symptom(lyme_disease, heart_palpitations).
+symptom(lyme_disease, dizziness).
+symptom(lyme_disease, shortness_of_breath).
+symptom(lyme_disease, numbness_or_tingling).
+symptom(lyme_disease, memory_problems).
+symptom(lyme_disease, joint_swelling).
+% Symptoms for Meningitis
+symptom(meningitis,fever).
+symptom(meningitis,headache).
+symptom(meningitis,stiff_neck).
+symptom(meningitis,nausea).
+symptom(meningitis,vomiting).
+symptom(meningitis,ensitivity_to_light).
+symptom(meningitis,confusion).
+
+% Symptoms for Salmonellosis
+symptom(salmonellosis,nausea).
+symptom(salmonellosis,vomiting).
+symptom(salmonellosis,diarrhea).
+symptom(salmonellosis,abdominal_cramps).
+symptom(salmonellosis,fever).
+symptom(salmonellosis,headache).
+
+% Symptoms for Shigellosis
+symptom(shigellosis, diarrhea).
+symptom(shigellosis, abdominal_pain).
+symptom(shigellosis, fever).
+symptom(shigellosis, nausea).
+symptom(shigellosis, vomiting).
+
+% Symptoms for Diphtheria
+symptom(diphtheria,sore_throat).
+symptom(diphtheria,fever).
+symptom(diphtheria,swollen_lymph_nodes).
+symptom(diphtheria,weakness).
+symptom(diphtheria,difficulty_breathing).
+symptom(diphtheria,bluish_skin_coloration).
+
+
+%symptom(severe_cough).
+%symptom(whooping_sound).
+%symptom(runny_nose).
+%symptom(fever).
+%symptom(fatigue).
+%symptom(vomiting).
+%symptom(apnea_in_infants).
+
+% Symptoms for Tetanus
+symptom(tetanus,muscle_stiffness).
+symptom(tetanus,spasms).
+symptom(tetanus,jaw_locking).
+symptom(tetanus,difficulty_swallowing).
+symptom(tetanus,fever).
+symptom(tetanus,sweating).
+symptom(tetanus,high_blood_pressure).
+
+% Symptoms for Legionnaires' Disease
+symptom(legionnaires_disease,cough).
+symptom(legionnaires_disease,fever).
+symptom(legionnaires_disease,chills).
+symptom(legionnaires_disease,shortness_of_breath).
+symptom(legionnaires_disease,chest_pain).
+symptom(legionnaires_disease,confusion).
+symptom(legionnaires_disease,muscle_pain).
+symptom(legionnaires_disease,headache).
+symptom(legionnaires_disease,diarrhea).
+symptom(legionnaires_disease,nausea).
+symptom(legionnaires_disease,vomiting).
+
+% Symptoms for Anthrax
+symptom(anthrax,flu_like_symptoms).
+symptom(anthrax,fever).
+symptom(anthrax,cough).
+symptom(anthrax,chest_discomfort).
+symptom(anthrax,shortness_of_breath).
+symptom(anthrax,sweating).
+symptom(anthrax,muscle_aches).
+symptom(anthrax,confusion).
+symptom(anthrax,shock).
+
+% Symptoms for Botulism
+symptom(botulism,difficulty_swallowing).
+symptom(botulism,slurred_speech).
+symptom(botulism,muscle_weakness).
+symptom(botulism,paralysis).
+symptom(botulism,blurred_vision).
+symptom(botulism,dry_mouth).
+symptom(botulism,difficulty_breathing).
+% Symptoms for Staphylococcal_infections
+symptom(staphylococcal_infections,skin_boils).
+symptom(staphylococcal_infections,abscesses).
+symptom(staphylococcal_infections,impetigo).
+symptom(staphylococcal_infections,cellulitis).
+symptom(staphylococcal_infections,fever).
+symptom(staphylococcal_infections,chills).
+symptom(staphylococcal_infections,fatigue).
+symptom(staphylococcal_infections,muscle_aches).
+symptom(staphylococcal_infections,headache).
+
+% Symptoms for E. Coli Infections
+symptom(coli_Infectionssevere ,diarrhea).
+symptom(coli_Infectionssevere ,abdominal_pain).
+symptom(coli_Infectionssevere ,vomiting).
+symptom(coli_Infectionssevere ,fever).
+symptom(coli_Infectionssevere ,nausea).
+
+% Symptoms for Listeriosis
+symptom(listeriosis,fever).
+symptom(listeriosis,muscle_aches).
+symptom(listeriosis,diarrhea).
+symptom(listeriosis,nausea).
+symptom(listeriosis,vomiting).
+symptom(listeriosis,headache).
+symptom(listeriosis,stiff_neck).
+symptom(listeriosis,confusion).
+
+% Symptoms for Tularemia
+symptom(tularemia,fever).
+symptom(tularemia,skin_ulcers).
+symptom(tularemia,swollen_lymph_nodes).
+symptom(tularemia,chills).
+symptom(tularemia,headache).
+symptom(tularemia,muscle_aches).
+symptom(tularemia,cough).
+
+
+
+disease(influenza, [feeling_feverish, coughing, sore_throat, runny_nose, headache, body_aches, fatigue]).
+disease(common_cold, [sore_throat, runny_nose, coughing]).
+disease(covid_19, [feeling_feverish, coughing, sore_throat, runny_nose, fatigue]).
+
+disease(tuberculosis, [cough, fever, weight_loss, night_sweats, fatigue, chest_pain, loss_of_appetite]).
+disease(cholera, [profuse_diarrhea, vomiting, dehydration, muscle_cramps, low_blood_pressure, rapid_heartbeat, electrolyte_imbalance, shock]).
+disease(gonorrhea, [burning_sensation_when_urinating, unusual_discharge_from_genitals, increased_urination, abdominal_pain, pelvic_pain, sore_throat, rectal_pain_or_discharge]).
+disease(lyme_disease, [erythema_migrans, fatigue, fever, headache, muscle_and_joint_aches, swollen_lymph_nodes, bulls_eye_rash, chills, facial_palsy, heart_palpitations, dizziness, shortness_of_breath, numbness_or_tingling, memory_problems, joint_swelling]).
+disease(meningitis, [fever, headache, stiff_neck, nausea, vomiting, sensitivity_to_light, confusion, rash, muscle_pain]).
+disease(salmonellosis, [nausea, vomiting, diarrhea, abdominal_cramps, fever, headache, muscle_pain]).
+disease(diphtheria, [sore_throat, fever, swollen_lymph_nodes, weakness, difficulty_breathing, bluish_skin_coloration]).
+disease(pertussis, [severe_cough, whooping_sound, runny_nose, fever, fatigue, vomiting, apnea(in_infants)]).
+disease(tetanus, [muscle_stiffness, spasms, jaw_locking, difficulty_swallowing, fever, sweating, high_blood_pressure]).
+disease(legionnaries_disease, [cough, fever, chills, shortness_of_breath, chest_pain, confusion, muscle_pain, headache, diarrhea, nausea, vomiting]).
+disease(anthrax, [flu-like_symptoms, fever, cough, chest_discomfort, shortness_of_breath, sweating, muscle_aches, confusion, shock]).
+disease(botulism, [difficulty_swallowing, slurred_speech, muscle_weakness, paralysis, blurred_vision, dry_mouth, difficulty_breathing]).
+disease(staphylococcal_infections, [skin_boils, abscesses, impetigo, cellulitis, fever, chills, fatigue, muscle_aches, headache]).
+disease(e_coli_infections, [severe_diarrhea(oftenbloody), abdominal_pain, vomiting, fever, nausea]).
+disease(listeriosis, [fever, muscle_aches, diarrhea, nausea, vomiting, headache, stiff_neck, confusion]).
+disease(shigellosis, [diarrhea, abdominal_pain, fever, nausea, vomiting]).
+disease(tularemia, [fever, skin_ulcers, swollen_lymph_nodes, chills, headache, muscle_aches, cough]).
+disease(brucellosis, [fever, sweats, weakness, fatigue, muscle_pain, joint_pain]).
+disease(peptic_ulcers, [abdominal_pain, bloating, heartburn, nausea, vomiting]).
+disease(pneumonic_plague, [fever, cough, difficulty_breathing, chest_pain]).
+disease(leprosy, [skin_patches, numbness, muscle_weakness, deformities]).
+disease(whitmores_disease, [fever, cough, chest_pain, headache, muscle_aches]).
+disease(cat_scratch_disease, [swollen_lymph_nodes, fever, headache, fatigue, body_aches]).
+disease(hiv_aids, [persistent_fever, night_sweats, unexplained_weight_loss, fatigue, swollen_lymph_nodes, diarrhea, white_oral_patches]).
+disease(influenza, [fever, cough, sore_throat, runny_nose, muscle_aches, fatigue, headache]).
+disease(hepatitis_b, [jaundice, dark_urine, fatigue, abdominal_pain, loss_of_appetite, nausea, vomiting]).
+disease(hepatitis_c, [jaundice, dark_urine, fatigue, abdominal_pain, loss_of_appetite, nausea, vomiting]).
+disease(herpes, [painful_blisters, itching, flu_like_symptoms, swollen_lymph_nodes]).
+disease(rubella, [mild_fever, rash, swollen_lymph_nodes, joint_pain]).
+disease(measles, [high_fever, cough, runny_nose, red_eyes, rash]).
+disease(polio, [fever, fatigue, headache, muscle_pain, paralysis]).
+disease(hpv, [genital_warts, no_symptoms_in_many_cases]).
+disease(hepatitis_a, [jaundice, dark_urine, fatigue, abdominal_pain, loss_of_appetite, nausea, vomiting]).
+disease(ebola, [fever, fatigue, muscle_pain, headache, vomiting, diarrhea, bleeding]).
+disease(zika, [fever, rash, joint_pain, conjunctivitis, muscle_pain, headache]).
+disease(dengue, [high_fever, severe_headache, joint_and_muscle_pain, rash, bleeding]).
+disease(hantavirus_infection, [fatigue, fever, muscle_aches, headache, dizziness, nausea, vomiting]).
+disease(covid_19, [fever, cough, shortness_of_breath, fatigue, loss_of_taste_or_smell, sore_throat, congestion, nausea, diarrhea]).
+disease(h1n1_influenza, [fever, cough, sore_throat, runny_nose, body_aches, fatigue, headache]).
+disease(h5n1_influenza, [fever, cough, sore_throat, difficulty_breathing, chest_pain, diarrhea, vomiting, abdominal_pain]).
+disease(hiv_aids, [persistent_fever, night_sweats, unexplained_weight_loss, fatigue, swollen_lymph_nodes, diarrhea, white_oral_patches]).
+
+
+
+
+
+
+
+caused(X,Y):-causes(Y,X).
+is_symptom(X,Y):-disease(Y,[X]).
+
+has_symptom(Y, X) :-symptom(Y,X).
+is_symptomof(X,Y):-symptom(Y,X).
+

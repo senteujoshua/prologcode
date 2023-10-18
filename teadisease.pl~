@@ -1,0 +1,38 @@
+% Define symptoms for Tea Leaf Rust
+symptoms('Tea Leaf Rust (Hemileia vastatrix)', 'Yellow-orange pustules on the undersides of tea leaves').
+symptoms('Tea Leaf Rust (Hemileia vastatrix)', 'Reduced photosynthesis').
+symptoms('Tea Leaf Rust (Hemileia vastatrix)', 'Lower quality tea leaves').
+% Define symptoms for Tea Green-Blister
+symptoms('Tea Green-Blister (Exobasidium vexans)', 'Raised, greenish blisters or galls on tea leaves').
+symptoms('Tea Green-Blister (Exobasidium vexans)', 'Reduced tea leaf quality').
+symptoms('Tea Green-Blister (Exobasidium vexans)', 'Reduced tea leaf quantity').
+% Define symptoms for Tea Mosquito Bug
+symptoms('Tea Mosquito Bug (Helopeltis spp.)', 'Feeding damage on tea leaves').
+symptoms('Tea Mosquito Bug (Helopeltis spp.)', 'Discolored tea leaves').
+symptoms('Tea Mosquito Bug (Helopeltis spp.)', 'Distorted tea leaves').
+% Define symptoms for Root Rot (Phytophthora spp.)
+symptoms('Root Rot (Phytophthora spp.)', 'Wilting of tea plants').
+symptoms('Root Rot (Phytophthora spp.)', 'Stunted growth of tea plants').
+symptoms('Root Rot (Phytophthora spp.)', 'Dark and water-soaked lesions on roots').
+symptoms('Root Rot (Phytophthora spp.)', 'Root decay and rotting').
+% Define symptoms for Purple Blister Blight
+symptoms('Purple Blister Blight (Exobasidium reticulatum)', 'Purple blisters on tea leaves').
+symptoms('Purple Blister Blight (Exobasidium reticulatum)', 'Ruptured blisters leaving brown scars on leaves').
+symptoms('Purple Blister Blight (Exobasidium reticulatum)', 'Reduced quality of tea leaves').
+% Define symptoms for Tea Anthracnose
+symptoms('Tea Anthracnose (Glomerella cingulata)', 'Irregular dark lesions on tea leaves').
+symptoms('Tea Anthracnose (Glomerella cingulata)', 'Reduced quality of tea leaves').
+symptoms('Tea Anthracnose (Glomerella cingulata)', 'Reduced yield of tea leaves').
+% Define symptoms for Black Rot
+symptoms('Black Rot (Lasiodiplodia theobromae)', 'Dark necrotic lesions and cankers on tea stems and leaves').
+symptoms('Black Rot (Lasiodiplodia theobromae)', 'Weakening of the tea plant').
+symptoms('Black Rot (Lasiodiplodia theobromae)', 'Reduced quality of tea leaves').
+% Define symptoms for Shot-Hole Borer
+symptoms('Shot-Hole Borer (Xylosandrus compactus)', 'Small entry holes bored into tea stems and branches').
+symptoms('Shot-Hole Borer (Xylosandrus compactus)', 'Damage to the tea plant\'s vascular system').
+symptoms('Shot-Hole Borer (Xylosandrus compactus)', 'Weakened tea plant structure').
+% Define symptoms for Powdery Mildew
+symptoms('Powdery Mildew (Erysiphe spp.)', 'White, powdery growth on the surface of tea leaves').
+symptoms('Powdery Mildew (Erysiphe spp.)', 'Reduced photosynthesis in tea plants').
+symptoms('Powdery Mildew (Erysiphe spp.)', 'Reduced quality of tea leaves').
+has_symptom(Y, X) :-symptoms(Y,X).
