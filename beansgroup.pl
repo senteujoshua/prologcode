@@ -1,7 +1,3 @@
-:- initialization(run_on_load, main).
-
-run_on_load :-
-    write('hello'), nl.
 disease(bean_rust,fungus).
 disease(black_root_rot,bacterial).
 disease(white_mould,fungus).
@@ -9,61 +5,64 @@ disease(bacterial_blight,bacterial).
 disease(mosaic,fungus).
 disease(anthracnose,fungus).
 
-symptoms(small_yellow_spots,bean_rust).
-symptoms(red_rust_pustules,bean_rust).
-symptoms(yellow_hallow,bean_rust).
-symptoms(small_white_spots,bean_rust).
 
-symptoms(red_purplelesions,black_root_rot).
-symptoms(largedark_roots,black_root_rot).
-symptoms(deep_lesions,black_root_rot).
+symptoms(bean_rust, small_yellow_spots).
+symptoms(bean_rust, red_rust_pustules).
+symptoms(bean_rust, yellow_hallow).
+symptoms(bean_rust, small_white_spots).
 
-symptoms(cottony_fungal_growth,white_mould).
-symptoms(water_soakedlesions,white_mould).
-symptoms(slimy_branch,white_mould).
+symptoms(black_root_rot, red_purplelesions).
+symptoms(black_root_rot, largedark_roots).
+symptoms(black_root_rot, deep_lesions).
 
-symptoms(yellowing_of_leaves, bacterial_blight).
-symptoms(brown_spots_on_leaves, bacterial_blight).
-symptoms(wilting_of_leaves, bacterial_blight).
-symptoms(water_soaked_lesions, bacterial_blight).
+symptoms(white_mould, cottony_fungal_growth).
+symptoms(white_mould, water_soakedlesions).
+symptoms(white_mould, slimy_branch).
 
-symptoms(mottled_leaves, mosaic).
-symptoms(stunted_growth, mosaic).
-symptoms(twisted_leaves, mosaic).
-symptoms(discoloration_of_leaves, mosaic).
+symptoms(bacterial_blight, yellowing_of_leaves).
+symptoms(bacterial_blight, brown_spots_on_leaves).
+symptoms(bacterial_blight, wilting_of_leaves).
+symptoms(bacterial_blight, water_soaked_lesions).
 
-symptoms(dark_brown_spots_on_leaves, anthracnose).
-symptoms(leaf_curling, anthracnose).
-symptoms(defoliation, anthracnose).
-symptoms(reduced_yield, anthracnose).
-has_symptom(bean_rust, small_yellow_spots).
-has_symptom(bean_rust, red_rust_pustules).
-has_symptom(bean_rust, yellow_hallow).
-has_symptom(bean_rust, small_white_spots).
+symptoms(mosaic, mottled_leaves).
+symptoms(mosaic, stunted_growth).
+symptoms(mosaic, twisted_leaves).
+symptoms(mosaic, discoloration_of_leaves).
 
-has_symptom(black_root_rot, red_purple_lesions).
-has_symptom(black_root_rot, large_dark_roots).
-has_symptom(black_root_rot, deep_lesions).
+symptoms(anthracnose, dark_brown_spots_on_leaves).
+symptoms(anthracnose, leaf_curling).
+symptoms(anthracnose, defoliation).
+symptoms(anthracnose, reduced_yield).
 
-has_symptom(white_mould, cottony_fungal_growth).
-has_symptom(white_mould, water_soaked_lesions).
-has_symptom(white_mould, slimy_branch).
+is_effect(reduced_yield, bacterial_blight).
+is_effect(discoloration_of_pod, bacterial_blight).
+is_effect(pod_rot, bacterial_blight).
+is_effect(defoliation, bacterial_blight).
 
-has_symptom(bacterial_blight, yellowing_of_leaves).
-has_symptom(bacterial_blight, brown_spots_on_leaves).
-has_symptom(bacterial_blight, wilting_of_leaves).
-has_symptom(bacterial_blight, water_soaked_lesions).
+is_effect(stunted_growth, mosaic).
+is_effect(deformed_pods, mosaic).
+is_effect(reduced_bean_size, mosaic).
+is_effect(reduced_yield, mosaic).
 
-has_symptom(mosaic, mottled_leaves).
-has_symptom(mosaic, stunted_growth).
-has_symptom(mosaic, twisted_leaves).
-has_symptom(mosaic, discoloration_of_leaves).
+is_effect(dark_spots_on_pods, anthracnose).
+is_effect(reduced_quality, anthracnose).
+is_effect(pod_rot, anthracnose).
+is_effect(defoliation, anthracnose).
 
-has_symptom(anthracnose, dark_brown_spots_on_leaves).
-has_symptom(anthracnose, leaf_curling).
-has_symptom(anthracnose, defoliation).
-has_symptom(anthracnose, reduced_yield).
+is_effect(rusty_spots_on_leaves, bean_rust).
+is_effect(reduced_bean_size, bean_rust).
+is_effect(premature_leaf_drop, bean_rust).
+is_effect(reduced_yield, bean_rust).
 
+is_effect(wilting_plants, black_root_rot).
+is_effect(brown_rotten_roots, black_root_rot).
+is_effect(stunted_growth, black_root_rot).
+is_effect(reduced_yield, black_root_rot).
+
+is_effect(fuzzy_white_growth, white_mould).
+is_effect(reduced_quality, white_mould).
+is_effect(brown_discoloration, white_mould).
+is_effect(reduced_yield, white_mould).
 has_effect(bacterial_blight, reduced_yield).
 has_effect(bacterial_blight, discoloration_of_pod).
 has_effect(bacterial_blight, pod_rot).
@@ -95,36 +94,55 @@ has_effect(white_mould, brown_discoloration).
 has_effect(white_mould, reduced_yield).
 
 
-is_effect(reduced_yield, bacterial_blight).
-is_effect(discoloration_of_pod, bacterial_blight).
-is_effect(pod_rot, bacterial_blight).
-is_effect(defoliation, bacterial_blight).
+is_sysmptom(X,Y):-symptoms(X,Y). 
 
-is_effect(stunted_growth, mosaic).
-is_effect(deformed_pods, mosaic).
-is_effect(reduced_bean_size, mosaic).
-is_effect(reduced_yield, mosaic).
-
-is_effect(dark_spots_on_pods, anthracnose).
-is_effect(reduced_quality, anthracnose).
-is_effect(pod_rot, anthracnose).
-is_effect(defoliation, anthracnose).
-
-is_effect(rusty_spots_on_leaves, bean_rust).
-is_effect(reduced_bean_size, bean_rust).
-is_effect(premature_leaf_drop, bean_rust).
-is_effect(reduced_yield, bean_rust).
-
-is_effect(wilting_plants, black_root_rot).
-is_effect(brown_rotten_roots, black_root_rot).
-is_effect(stunted_growth, black_root_rot).
-is_effect(reduced_yield, black_root_rot).
-
-is_effect(fuzzy_white_growth, white_mould).
-is_effect(reduced_quality, white_mould).
-is_effect(brown_discoloration, white_mould).
-is_effect(reduced_yield, white_mould).
-
-
-is_sysmptom(X,Y):-symptoms(X,Y).
 effect_of(X,Y):-is_effect(X,Y).
+
+%identify_disease_and_effects(Symptom) :-
+   % symptoms(Disease, Symptom),
+   % write('The entered symptom is related to the disease: '), write(Disease), nl,
+    %write('The effects of this disease include: '), nl,
+   % findall(Effect, has_effect(Disease,Effect), Effects),
+   % print_effects(Effects).
+%identify_disease_and_effects(Symptom) :-
+% write('The entered symptom is related to the disease: '),
+% write(Disease), nl,
+  % write('The effects of this disease include: '), nl,
+  % print_effects(Disease).
+
+%print_effects(Disease) :-
+%    has_effect(Disease, Effect),
+%    write('- '), write(Effect), nl,
+%    fail.
+%print_effects(_).
+
+
+%start :-
+   % write('Enter a symptom: '),
+   % read_line_to_string(user_input, Symptom),
+   % identify_disease_and_effects(Symptom),
+   % !.
+identify_disease_and_effects(Disease, Symptom) :-
+    symptoms(Disease, Symptom),
+    write('The entered symptom is related to the disease: '), write(Disease), nl,
+    write('The effects of this disease include: '), nl,
+    print_effects(Disease).
+
+print_effects(Disease) :-
+    has_effect(Disease, Effect),
+    write('- '), write(Effect), nl,
+    fail.
+print_effects(_).
+
+start :-
+    write('Enter a symptom: '),
+    read_line_to_string(user_input, Symptom),
+    write('Enter a disease as x: '),
+    read_line_to_string(user_input, Disease),
+    identify_disease_and_effects(Disease, Symptom),
+    !.
+
+
+
+
+
